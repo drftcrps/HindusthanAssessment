@@ -1,0 +1,25 @@
+body
+{
+    margin: 0   ;
+}
+div,ul{
+    display: flex;
+    
+    background-color: rgb(12, 168, 230);
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+div{
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    color: rgb(4, 5, 5);
+  }
