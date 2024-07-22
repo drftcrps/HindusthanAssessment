@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Quiz App</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: gray;
+      }
+      .main-box
+      {
+        max-width: 400px;
+        margin: 240px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color:rgb(241, 208, 195);
+      }
+      
+      .question {
+        margin-bottom: 20px;
+      }
+      .options {
+        margin-bottom: 10px;
+        max-width: 400px;
+   
+      }
+      .option {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 10px;
+      }
+      .option.correct {
+        background-color: lightgreen;
+      }
+      .option.incorrect {
+        background-color: lightcoral;
+      }
+      .result {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-box">
+    <div class="question">
+      <h2>In web design, what does CSS stand for?</h2>
+    </div>
+    <div class="options">
+      <div class="option" id="optionA">A. Counter Strike: Source</div>
+      <div class="option" id="optionB">B. Corrective Style Sheet</div>
+      <div class="option" id="optionC">C. Computer Style Sheet</div>
+      <div class="option" id="optionD">D. Cascading Style Sheet</div>
+    </div>
+</div>
+    <script>
+      const options = document.querySelectorAll(".option");
+
+      options.forEach((option) => {
+        option.addEventListener("click", () => {
+          const correctAnswer = "D";
+          const selectedAnswer = option.id.slice(-1);
+
+          if (selectedAnswer === correctAnswer) {
+            option.classList.add("correct");
+          } else {
+            option.classList.add("incorrect");
+          }
+         
+        });
+      });
+    </script>
+  </body>
+</html>
